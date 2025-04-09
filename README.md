@@ -1,7 +1,65 @@
-# Prueba Técnica Senior Front End Engineer - Cometa
+# Senior Front End Engineer Technical Test - Cometa
+
+## Live Version
+
+You can check out the live version hosted on Vercel:
+https://cometa-project-joseph.vercel.app/
+
+## Technologies Used
+
+- Next.js
+- React
+- Node.js
+- Tailwind CSS
+- React Query
+- Firebase
+- Shadcn
+- Zustand
+- Jest & RTL
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js >= 18.18.0
+- npm
+
+## Installation
+
+Clone the repository, navigate to the project folder, and install dependencies:
+
+```bash
+npm install
+```
+
+## Running the Project
+
+To start the project, use the command:
+
+```bash
+npm run dev
+```
+
+Then, open your browser and go to:
+http://localhost:3000
+
+## Testing
+
+To run the tests, use the following command:
+
+```bash
+npm test
+```
+
+## Env variables
+
+The project uses Firebase as the database. If you need to run the project locally, I will send you the `.env` variables via email.
+
+# Prueba Técnica Senior Front End Engineer - Cometa (Español)
 
 ## Version live en Vercel
 
+Aqui puedes ver la versión deployada en Vercel:
 https://cometa-project-joseph.vercel.app/
 
 ## 🛠️ Tecnologías utilizadas
