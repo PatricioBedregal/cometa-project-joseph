@@ -30,7 +30,7 @@ export default function Cart({
       <div className='sticky top-0 z-10 bg-white'>
         <div className='px-6 pt-8 pb-4'>
           <h1 className='text-3xl font-bold text-gray-900'>Your Orders</h1>
-          <p className='text-gray-500 mt-1'>Wait for the best meal</p>
+          <p className='text-gray-500 mt-1'>Wait for the best beer</p>
         </div>
 
         <div className='px-6 border-b border-gray-200'>

@@ -38,8 +38,8 @@ export default function Home() {
     <>
       <div className='px-5 pt-6 pb-4 flex justify-between items-center fixed top-0 left-0 right-0 bg-white z-10 shadow-sm'>
         <div>
-          <h1 className='text-3xl font-bold text-gray-900'>FoodMarket</h1>
-          <p className='text-gray-500 mt-1'>Let&apos;s get some foods</p>
+          <h1 className='text-3xl font-bold text-gray-900'>BeerMarket</h1>
+          <p className='text-gray-500 mt-1'>Let&apos;s get some beers</p>
         </div>
         <div className='w-15 h-15 rounded-lg overflow-hidden'>
           <Image
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex-1 overflow-auto mb-63px'>
+      <div className='flex-1 overflow-auto mb-[63px]'>
         <div className='px-5 py-3'>
           {isLoading
             ? Array.from({ length: 6 }).map((_, index) => (

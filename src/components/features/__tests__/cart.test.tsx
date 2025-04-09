@@ -70,7 +70,7 @@ describe('Cart Component', () => {
   test('renders the cart component with title', () => {
     renderCart()
     expect(screen.getByText('Your Orders')).toBeInTheDocument()
-    expect(screen.getByText('Wait for the best meal')).toBeInTheDocument()
+    expect(screen.getByText('Wait for the best beer')).toBeInTheDocument()
   })
 
   test('shows empty state for in-progress orders when none exist', () => {

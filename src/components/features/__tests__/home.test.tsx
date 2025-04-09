@@ -66,8 +66,8 @@ describe('Home Component', () => {
   test('renders the component with titles', () => {
     render(<Home />)
 
-    expect(screen.getByText('FoodMarket')).toBeInTheDocument()
-    expect(screen.getByText("Let's get some foods")).toBeInTheDocument()
+    expect(screen.getByText('BeerMarket')).toBeInTheDocument()
+    expect(screen.getByText("Let's get some beers")).toBeInTheDocument()
   })
 
   test('displays featured items correctly', () => {
