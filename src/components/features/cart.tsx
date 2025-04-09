@@ -37,9 +37,9 @@ export default function Cart({
           <div className='flex space-x-8'>
             <button
               onClick={() => setActiveTab('in-progress')}
-              className={`py-3 font-medium relative ${
+              className={`cursor-pointer py-3 font-medium relative transition-transform active:scale-95 ${
                 activeTab === 'in-progress'
-                  ? 'text-gray-900 border-b-2 border-gray-900'
+                  ? 'text-gray-900 border-b-2 border-red-500'
                   : 'text-gray-400'
               }`}
             >
@@ -47,9 +47,9 @@ export default function Cart({
             </button>
             <button
               onClick={() => setActiveTab('past-orders')}
-              className={`py-3 font-medium relative ${
+              className={`cursor-pointer py-3 font-medium relative transition-transform active:scale-95 ${
                 activeTab === 'past-orders'
-                  ? 'text-gray-900 border-b-2 border-gray-900'
+                  ? 'text-gray-900 border-b-2 border-red-500'
                   : 'text-gray-400'
               }`}
             >
