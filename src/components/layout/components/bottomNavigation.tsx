@@ -9,7 +9,7 @@ export default function BottomNavigation() {
   const { totalCartItems } = useCart()
 
   return (
-    <div className='h-16 border-t border-gray-200 flex items-center justify-around px-5 bg-white'>
+    <div className='fixed bottom-0 left-0 right-0 h-16 border-t border-gray-200 flex items-center justify-around px-5 bg-white z-10'>
       <Tooltip>
         <TooltipTrigger asChild>
           <button

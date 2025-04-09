@@ -26,38 +26,40 @@ export default function Cart({
   const [activeTab, setActiveTab] = useState('in-progress')
 
   return (
-    <div className='flex flex-col bg-white'>
-      <div className='px-6 pt-8 pb-4'>
-        <h1 className='text-3xl font-bold text-gray-900'>Your Orders</h1>
-        <p className='text-gray-500 mt-1'>Wait for the best meal</p>
-      </div>
+    <div className='flex flex-col bg-white h-full'>
+      <div className='sticky top-0 z-10 bg-white'>
+        <div className='px-6 pt-8 pb-4'>
+          <h1 className='text-3xl font-bold text-gray-900'>Your Orders</h1>
+          <p className='text-gray-500 mt-1'>Wait for the best meal</p>
+        </div>
 
-      <div className='px-6 border-b border-gray-200'>
-        <div className='flex space-x-8'>
-          <button
-            onClick={() => setActiveTab('in-progress')}
-            className={`py-3 font-medium relative ${
-              activeTab === 'in-progress'
-                ? 'text-gray-900 border-b-2 border-gray-900'
-                : 'text-gray-400'
-            }`}
-          >
-            In Progress
-          </button>
-          <button
-            onClick={() => setActiveTab('past-orders')}
-            className={`py-3 font-medium relative ${
-              activeTab === 'past-orders'
-                ? 'text-gray-900 border-b-2 border-gray-900'
-                : 'text-gray-400'
-            }`}
-          >
-            Past Orders
-          </button>
+        <div className='px-6 border-b border-gray-200'>
+          <div className='flex space-x-8'>
+            <button
+              onClick={() => setActiveTab('in-progress')}
+              className={`py-3 font-medium relative ${
+                activeTab === 'in-progress'
+                  ? 'text-gray-900 border-b-2 border-gray-900'
+                  : 'text-gray-400'
+              }`}
+            >
+              In Progress
+            </button>
+            <button
+              onClick={() => setActiveTab('past-orders')}
+              className={`py-3 font-medium relative ${
+                activeTab === 'past-orders'
+                  ? 'text-gray-900 border-b-2 border-gray-900'
+                  : 'text-gray-400'
+              }`}
+            >
+              Past Orders
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className='flex-1 overflow-auto p-6 max-h-[78vh]'>
+      <div className='flex-1 overflow-auto p-6 mb-[63px]'>
         {isLoading ? (
           <div className='space-y-6'>
             {[1, 2, 3].map((i) => (
