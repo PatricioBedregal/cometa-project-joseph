@@ -3,6 +3,7 @@
 import { Star } from 'lucide-react'
 import Image from 'next/image'
 
+import { formatPrice } from '@/lib/utils'
 import { FoodItemType } from '@/types/food'
 
 interface FoodItemProps {
@@ -27,12 +28,7 @@ export default function FoodItem({ item, onClick }: FoodItemProps) {
       </div>
       <div className='ml-4 flex-1'>
         <h3 className='font-semibold text-gray-900'>{item.name}</h3>
-        <p className='text-gray-500 text-sm'>
-          {new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          }).format(Number(item.price))}
-        </p>
+        <p className='text-gray-500 text-sm'>{formatPrice(Number(item.price))}</p>
       </div>
       <div className='flex items-center'>
         {Array.from({ length: 5 }).map((_, i) => (

@@ -3,6 +3,7 @@
 import { ArrowLeft, Loader2 } from 'lucide-react'
 import Image from 'next/image'
 
+import { formatPrice } from '@/lib/utils'
 import { Order } from '@/types/orders'
 
 interface PaymentViewProps {
@@ -17,13 +18,6 @@ export default function PaymentView({ order, onBack, onCheckout, isLoading }: Pa
   const driverFee = order.driver
   const tax = order.taxes
   const total = subtotal + driverFee + tax
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    }).format(Number(price))
-  }
 
   return (
     <div className='flex flex-col min-h-screen bg-white'>

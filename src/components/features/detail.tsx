@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { ArrowLeft, Loader2, Minus, Plus, Star } from 'lucide-react'
 import Image from 'next/image'
 
+import { formatPrice } from '@/lib/utils'
 import { FoodItemType } from '@/types/food'
 
 interface FoodDetailProps {
@@ -105,10 +106,7 @@ export default function FoodDetail({ food, onBack, onAddToCart, isLoading }: Foo
           <p className='text-gray-500 mb-1'>Total Price:</p>
           <div className='flex justify-between items-center'>
             <p className='text-xl font-bold text-gray-900'>
-              {new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-              }).format(Number(food.price) * quantity)}
+              {formatPrice(Number(food.price) * quantity)}
             </p>
             <button
               onClick={handleAddToCart}

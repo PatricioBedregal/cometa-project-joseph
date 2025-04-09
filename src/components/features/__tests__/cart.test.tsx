@@ -8,7 +8,6 @@ import { Order } from '@/types/orders'
 describe('Cart Component', () => {
   const mockOnBack = jest.fn()
   const mockOnViewOrder = jest.fn()
-  const mockFormatPrice = (price: number) => `$${price.toFixed(2)}`
 
   const mockInProgressOrders: Order[] = [
     {
@@ -60,7 +59,6 @@ describe('Cart Component', () => {
     return render(
       <Cart
         onBack={mockOnBack}
-        formatPrice={mockFormatPrice}
         inProgressOrders={[]}
         pastOrders={[]}
         onViewOrder={mockOnViewOrder}

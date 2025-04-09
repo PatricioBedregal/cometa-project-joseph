@@ -12,14 +12,6 @@ export default function CartPage() {
   const { data: pastOrders, isLoading: isPastOrdersLoading } = useOrders(true)
   const { data: inProgressOrders, isLoading: isInProgressOrdersLoading } = useOrders(false)
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR',
-      minimumFractionDigits: 0,
-    }).format(price)
-  }
-
   const handleViewOrder = (order: Order) => {
     router.push(`/payment/${order.id}`)
   }
@@ -28,7 +20,6 @@ export default function CartPage() {
     <Layout>
       <Cart
         onBack={() => router.push('/')}
-        formatPrice={formatPrice}
         inProgressOrders={inProgressOrders || []}
         pastOrders={pastOrders || []}
         onViewOrder={handleViewOrder}

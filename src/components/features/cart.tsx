@@ -5,11 +5,11 @@ import { useState } from 'react'
 import { ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
 
+import { formatPrice } from '@/lib/utils'
 import { Order } from '@/types/orders'
 
 interface CartProps {
   onBack: () => void
-  formatPrice: (price: number) => string
   inProgressOrders: Order[]
   pastOrders: Order[]
   onViewOrder: (order: Order) => void
@@ -113,11 +113,7 @@ export default function Cart({
                       <div className='ml-4'>
                         <h3 className='text-xl font-semibold text-gray-900'>{item.name}</h3>
                         <p className='text-gray-500'>
-                          {item.quantity} items •{' '}
-                          {new Intl.NumberFormat('en-US', {
-                            style: 'currency',
-                            currency: 'USD',
-                          }).format(Number(item.price_per_unit))}
+                          {item.quantity} items • {formatPrice(Number(item.price_per_unit))}
                         </p>
                       </div>
                     </div>
@@ -154,11 +150,7 @@ export default function Cart({
                     <div className='ml-4'>
                       <h3 className='text-xl font-semibold text-gray-900'>{item.name}</h3>
                       <p className='text-gray-500'>
-                        {item.quantity} items •{' '}
-                        {new Intl.NumberFormat('en-US', {
-                          style: 'currency',
-                          currency: 'USD',
-                        }).format(Number(item.price_per_unit))}
+                        {item.quantity} items • {formatPrice(Number(item.price_per_unit))}
                       </p>
                     </div>
                   </div>
